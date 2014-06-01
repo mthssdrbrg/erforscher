@@ -1,0 +1,39 @@
+[
+  {
+    "tags":[
+      {"key":"Name", "value":"instance-001"},
+      {"key":"Environment","value":"test"},
+      {"key":"Group", "value":"Some group"},
+      {"key":"Created-By", "value":"no-one"}
+    ],
+    "private_ip_address":"10.0.0.1"
+  },
+  {
+    "tags":[
+      {"key":"Name", "value":"instance-002"},
+      {"key":"Environment", "value":"test"}
+    ],
+    "private_ip_address":"10.0.0.2"
+  },
+  {
+    "tags":[
+      {"key":"Name", "value":"instance-003"},
+      {"key":"Environment", "value":"Cli"}
+    ],
+    "private_ip_address":"10.0.0.3"
+  },
+  {
+    "tags":[
+      {"key":"NameTag", "value":"instance-004"},
+      {"key":"Environment", "value":"other"}
+    ],
+    "private_ip_address":"10.0.0.4"
+  },
+  {
+    "tags":[
+      {"key":"Name", "value":"instance-005"},
+      {"key":"Environment", "value":"test2"}
+    ],
+    "private_ip_address":"10.0.0.5"
+  }
+]

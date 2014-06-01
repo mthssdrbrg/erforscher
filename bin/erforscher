@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$: << File.expand_path('../../lib', __FILE__)
+
+require 'erforscher'
+
+exit(Erforscher::Cli.run(ARGV, $stderr))

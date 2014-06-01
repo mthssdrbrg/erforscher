@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    erforscher (0.1.0)
+      aws-sdk-core
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,6 +36,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk-core
+  erforscher!
   rspec
   simplecov

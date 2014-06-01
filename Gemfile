@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'aws-sdk-core'
+gemspec
 
 group :test do
   gem 'rspec'
