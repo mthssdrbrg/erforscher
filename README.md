@@ -8,8 +8,8 @@ to `/etc/hosts` (or any file of your choosing).
 By default, Erforscher will look for a configuration file in the following
 places (and in the given order);
 
-* $HOME/.erforscher.yml
-* /etc/erforscher.yml
+* `$HOME/.erforscher.yml`
+* `/etc/erforscher.yml`
 
 As indicated below it's also possible to give the path to a configuration file
 using the `-c|--config` option, and in that case the given path will be used.
