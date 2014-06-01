@@ -12,8 +12,8 @@ module Erforscher
 
     def run
       explored = explorer.discover(@config['tags'])
-      entries = explored.sort.map { |ex| formatter.format(ex) }
-      hostsfile.write(entries)
+      entries = explored.map { |ex| formatter.format(ex) }
+      hostsfile.write(entries.sort)
       hostsfile.switchero
     end
 
