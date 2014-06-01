@@ -49,7 +49,9 @@ describe 'bin/erforscher' do
   end
 
   after do
+    hostsfile.close
     hostsfile.delete
+    config_file.close
     config_file.delete
   end
 
