@@ -11,10 +11,12 @@ module Erforscher
       if config['print_usage']
         io.puts(@parser)
         2
+      elsif config['print_version']
+        io.puts(%(erforscher v#{Erforscher::VERSION}))
       else
         Runner.run(config)
-        0
       end
+      0
     rescue => e
       io.puts(%(#{e.message} (#{e.class.name})))
       io.puts(@parser)
@@ -35,6 +37,10 @@ module Erforscher
 
         parser.on('-N', '--name=TAG', '"Name" `tag`') do |name_tag|
           cli['name_tag'] = name_tag
+        end
+
+        parser.on('-v', '--version', 'Display current version') do
+          cli['print_version'] = true
         end
 
         parser.on('-h', '--help', 'You\'re looking at it') do

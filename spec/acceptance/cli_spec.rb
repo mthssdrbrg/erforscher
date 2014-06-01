@@ -54,15 +54,15 @@ describe 'bin/erforscher' do
   end
 
   context 'when given --help or -h' do
-    it 'returns 2 and prints usage' do
+    it 'returns 0 and prints usage' do
       code = Erforscher::Cli.run(%w[-h], io)
-      expect(code).to eq(2)
+      expect(code).to eq(0)
       expect(io.string).to include 'Usage:'
 
       io.rewind
 
       code = Erforscher::Cli.run(%w[--help], io)
-      expect(code).to eq(2)
+      expect(code).to eq(0)
       expect(io.string).to include 'Usage:'
     end
   end
@@ -136,6 +136,20 @@ describe 'bin/erforscher' do
 
     it 'uses given `tag` for parsing hostnames' do
       expect(new_hostsfile).to include("instance-004\t10.0.0.4")
+    end
+  end
+
+  context 'when given -v or --version' do
+    it 'returns 0 and prints current version' do
+      code = Erforscher::Cli.run(%w[-v], io)
+      expect(code).to eq(0)
+      expect(io.string).to match(/^erforscher v\d+\.\d+\.\d+/)
+
+      io.rewind
+
+      code = Erforscher::Cli.run(%w[--version], io)
+      expect(code).to eq(0)
+      expect(io.string).to match(/^erforscher v\d+\.\d+\.\d+/)
     end
   end
 end

@@ -31,7 +31,8 @@ the near future.
 ## Usage
 
 ```bash
-erforscher --help
+erforscher -h|--help
+erforscher -v|--version
 erforscher -T|--tags <K1=V1,K2=V2>
 erforscher -N|--name <TAG>
 erforscher -c|--config <PATH>
