@@ -1,10 +1,12 @@
 # encoding: utf-8
 
 require 'json'
-require 'simplecov'
+require 'ostruct'
 
 require 'support/fake_ec2'
 require 'support/resource'
+
+require 'simplecov'
 
 SimpleCov.start do
   add_group 'Source', 'lib'
