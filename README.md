@@ -1,6 +1,7 @@
 # Erforscher
 
 [![Build Status](https://travis-ci.org/mthssdrbrg/erforscher.svg?branch=master)](https://travis-ci.org/mthssdrbrg/erforscher)
+[![Gem Version](https://badge.fury.io/rb/erforscher.svg)](http://badge.fury.io/rb/erforscher)
 
 Erforscher, German for "explorer", is a poor man's service discovery tool that
 utilizes the AWS EC2 APIs to filter instances from a configured set of `tags`
