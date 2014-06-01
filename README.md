@@ -19,8 +19,12 @@ to merge settings if there should be files in the above mentioned places.
 
 ## Installation
 
-No, not currently, but it will be available as a `gem` and as `omnibus`
-packages, whenever it's ready for releasing out into the wild.
+```
+gem install erforscher --pre
+```
+
+It will be available as `omnibus` packages and most likely a `Chef` cookbook in
+the near future.
 
 ## Usage
 
