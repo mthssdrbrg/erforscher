@@ -15,7 +15,7 @@ module Erforscher
     let :instance do
       OpenStruct.new({
         tags: [
-          OpenStruct.new({key: 'Name', value: 'hello-world-001.domain.com'})
+          {key: 'Name', value: 'hello-world-001.domain.com'}
         ],
         private_ip_address: '10.0.0.1',
         private_dns_name: 'private-dns-name',

@@ -2,12 +2,7 @@
 
 class FakeEc2
   def initialize(instances)
-    @instances = instances.map do |instance|
-      tags = instance.delete(:tags)
-      tags = tags.map { |tag| OpenStruct.new(tag) }
-      instance[:tags] = tags
-      OpenStruct.new(instance)
-    end
+    @instances = instances.map { |instance| OpenStruct.new(instance) }
   end
 
   def describe_instances(opts={})

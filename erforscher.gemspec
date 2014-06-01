@@ -22,5 +22,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'aws-sdk-core'
 
   s.platform = Gem::Platform::RUBY
-  s.required_ruby_version = '~> 2.0'
+  s.required_ruby_version = '>= 1.9.3'
 end

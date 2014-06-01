@@ -23,7 +23,7 @@ module Erforscher
 
     def find_name(tags)
       tag = tags.find { |tag| tag[:key] == @name_tag }
-      tag.value if tag
+      tag[:value] if tag
     end
 
     def strip_domain(name)
