@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    erforscher (0.1.0)
+    erforscher (1.0.0.pre0)
       aws-sdk-core
 
 GEM
