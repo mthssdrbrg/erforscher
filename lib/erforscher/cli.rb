@@ -13,6 +13,7 @@ module Erforscher
         2
       else
         Runner.run(config)
+        0
       end
     rescue => e
       io.puts(%(#{e.message} (#{e.class.name})))

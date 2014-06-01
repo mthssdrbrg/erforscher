@@ -16,6 +16,7 @@ module Erforscher
       write_footer
       discard_old_entries
       copy_after_footer
+      nil
     end
 
     def switch
@@ -24,6 +25,7 @@ module Erforscher
       @fileutils.mv(current_path, current_prev_path)
       @fileutils.mv(new_path, current_path)
       @fileutils.chmod(0644, current_path)
+      nil
     end
 
     private
