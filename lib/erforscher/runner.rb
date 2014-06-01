@@ -14,7 +14,7 @@ module Erforscher
       explored = explorer.discover(@config['tags'])
       entries = explored.map { |ex| formatter.format(ex) }
       hostsfile.write(entries.sort)
-      hostsfile.switchero
+      hostsfile.switch
     end
 
     private

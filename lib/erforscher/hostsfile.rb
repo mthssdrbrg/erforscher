@@ -18,24 +18,26 @@ module Erforscher
       copy_after_footer
     end
 
-    def switchero
+    def switch
       @new_file.close
+      @current_file.close
       @fileutils.mv(current_path, current_prev_path)
       @fileutils.mv(new_path, current_path)
+      @fileutils.chmod(0644, current_path)
     end
 
     private
 
     def new_path
-      @new_file.path
+      @new_path ||= @new_file.path
     end
 
     def current_path
-      absolute_path(@current_file)
+      @current_path ||= absolute_path(@current_file)
     end
 
     def current_prev_path
-      %(#{absolute_path(@current_file)}.prev)
+      @current_prev_path ||= %(#{absolute_path(@current_file)}.prev)
     end
 
     def absolute_path(f)

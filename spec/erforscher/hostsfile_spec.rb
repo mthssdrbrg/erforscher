@@ -100,7 +100,7 @@ module Erforscher
       end
     end
 
-    describe '#switchero' do
+    describe '#switch' do
       let :new_file do
         Tempfile.new('new_file')
       end
@@ -118,11 +118,15 @@ module Erforscher
       end
 
       before do
-        hostsfile.switchero
+        hostsfile.switch
       end
 
       it 'closes the new file' do
         new_file.should be_closed
+      end
+
+      it 'closes the old file' do
+        current_file.should be_closed
       end
 
       it 'backups the previous file' do
@@ -131,6 +135,10 @@ module Erforscher
 
       it 'renames the new file' do
         fileutils.should have_received(:mv).with(absolute_new_path, absolute_current_path)
+      end
+
+      it 'applies 0644 permissions on the new file' do
+        fileutils.should have_received(:chmod).with(0644, absolute_current_path)
       end
     end
   end
