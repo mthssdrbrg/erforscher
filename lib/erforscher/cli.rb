@@ -22,14 +22,6 @@ module Erforscher
 
     private
 
-    def defaults
-      {
-        'name_tag' => 'Name',
-        'hostsfile_path' => '/etc/hosts',
-        'tags' => []
-      }
-    end
-
     def parse_options(argv, cli={})
       @parser = OptionParser.new do |parser|
         parser.on('-c', '--config=PATH', 'Path to configuration file') do |config_path|
@@ -49,20 +41,7 @@ module Erforscher
         end
       end
       @parser.parse(argv)
-      config = read_config(cli['config_path'])
-      options = defaults.merge(config).merge(cli)
-      options
-    end
-
-    def read_config(path=nil)
-      if path
-        unless File.exist?(path)
-          raise 'Could not find configuration file %s' % path
-        end
-        YAML.load_file(path)
-      else
-        {}
-      end
+      Configuration.new(cli).get
     end
 
     def parse_tags(keys_values)

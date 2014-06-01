@@ -105,7 +105,7 @@ describe 'bin/erforscher' do
       it 'prints an error message and usage' do
         Erforscher::Cli.run(%w[--config non-existing-file.yml], io)
 
-        expect(io.string).to include('Could not find configuration file')
+        expect(io.string).to include('Could not find any configuration file')
         expect(io.string).to include('Usage:')
       end
     end

@@ -12,6 +12,7 @@ module Erforscher
 end
 
 require 'erforscher/cli'
+require 'erforscher/configuration'
 require 'erforscher/explorer'
 require 'erforscher/formatter'
 require 'erforscher/hostsfile'
