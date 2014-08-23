@@ -7,9 +7,9 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    aws-sdk-core (2.0.0.rc8)
+    aws-sdk-core (2.0.0.rc15)
       builder (~> 3.0)
-      jamespath
+      jamespath (~> 0)
       multi_json (~> 1.0)
       multi_xml (~> 0.5)
     builder (3.2.2)
